@@ -235,7 +235,7 @@ function s_validate() {
         </a>
       </div>
       <div class="social">
-        <a href="https://www.github.com/weebzone/WZML"><i class="fab fa-github"></i></a>
+        <a href="https://github.COM/Ishatgrepo/BOT1"><i class="fab fa-github"></i></a>
         <a href="https://t.me/krn_adhikari"><i class="fab fa-telegram"></i></a>
       </div>
     </header>
@@ -622,13 +622,13 @@ section span{
           src="https://graph.org/file/1a6ad157f55bc42b548df.png"
           alt="logo"
         />
-        <a href="https://t.me/WZML_X">
+        <a href="https://t.me/H_ONEYSINGH">
           <h2 class="name">Bittorrent Selection</h2>
         </a>
       </div>
       <div class="social">
-        <a href="https://www.github.com/weebzone/WZML-X"><i class="fab fa-github"></i></a>
-        <a href="https://t.me/WZML_X"><i class="fab fa-telegram"></i></a>
+        <a href="https://github.COM/Ishatgrepo/BOT1"><i class="fab fa-github"></i></a>
+        <a href="https://t.me/H_ONEYSINGH"><i class="fab fa-telegram"></i></a>
       </div>
     </header>
     <section>
@@ -835,7 +835,7 @@ def homepage():
 </head>
 <body>
     <div class="header">
-        <h1>WZML-X</h1>
+        <h1>SEARCH-X</h1>
     </div>
     <div class="content">
         <img src="https://graph.org/file/639fe4239b78e5862b302.jpg" class="image">
@@ -844,7 +844,7 @@ def homepage():
         </a>
     </div>
     <div class="footer">
-© 2022-23 WZML-X. All Rights Reserved.
+© 2022-23 SEARCH-X. All Rights Reserved.
     </div>
 </body>
 </html>
