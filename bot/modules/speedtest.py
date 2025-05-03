@@ -68,7 +68,6 @@ bot.add_handler(
     MessageHandler(
         speedtest,
         filters=command(BotCommands.SpeedCommand)
-        & CustomFilters.authorized
-        & ~CustomFilters.blacklisted,
+        & CustomFilters.sudo
     )
 )

@@ -119,16 +119,16 @@ async def clear(client, message):
 
 bot.add_handler(
     MessageHandler(
-        evaluate, filters=command(BotCommands.EvalCommand) & CustomFilters.sudo
+        evaluate, filters=command(BotCommands.EvalCommand) & CustomFilters.owner
     )
 )
 bot.add_handler(
     MessageHandler(
-        execute, filters=command(BotCommands.ExecCommand) & CustomFilters.sudo
+        execute, filters=command(BotCommands.ExecCommand) & CustomFilters.owner
     )
 )
 bot.add_handler(
     MessageHandler(
-        clear, filters=command(BotCommands.ClearLocalsCommand) & CustomFilters.sudo
+        clear, filters=command(BotCommands.ClearLocalsCommand) & CustomFilters.owner
     )
 )
