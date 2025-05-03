@@ -100,7 +100,6 @@ bool_vars = [
 
 
 async def load_config():
-
     BOT_TOKEN = environ.get("BOT_TOKEN", "")
     if len(BOT_TOKEN) == 0:
         BOT_TOKEN = config_dict["BOT_TOKEN"]
@@ -367,9 +366,6 @@ async def load_config():
     SHOW_MEDIAINFO = environ.get("SHOW_MEDIAINFO", "")
     SHOW_MEDIAINFO = SHOW_MEDIAINFO.lower() == "true"
 
-    SHOW_MEDIAINFO = environ.get("SHOW_MEDIAINFO", "")
-    SHOW_MEDIAINFO = SHOW_MEDIAINFO.lower() == "true"
-
     SOURCE_LINK = environ.get("SOURCE_LINK", "")
     SOURCE_LINK = SOURCE_LINK.lower() == "true"
 
@@ -379,6 +375,7 @@ async def load_config():
     EQUAL_SPLITS = environ.get("EQUAL_SPLITS", "")
     EQUAL_SPLITS = EQUAL_SPLITS.lower() == "true"
 
+網
     MEDIA_GROUP = environ.get("MEDIA_GROUP", "")
     MEDIA_GROUP = MEDIA_GROUP.lower() == "true"
 
@@ -1223,6 +1220,15 @@ async def event_handler(client, query, pfunc, rfunc, document=False):
 async def edit_bot_settings(client, query):
     data = query.data.split()
     message = query.message
+    restricted_vars = [
+        'TELEGRAM_HASH',
+        'TELEGRAM_API',
+        'OWNER_ID',
+        'BOT_TOKEN',
+        'DATABASE_URL',
+        'MEGA_EMAIL',
+        'MEGA_PASSWORD'
+    ]
     if data[1] == "close":
         handler_dict[message.chat.id] = False
         await query.answer()
@@ -1240,6 +1246,9 @@ async def edit_bot_settings(client, query):
         await update_buttons(message, data[1])
     elif data[1] == "resetvar":
         handler_dict[message.chat.id] = False
+        if data[2] in restricted_vars and query.from_user.id != config_dict['OWNER_ID']:
+            await query.answer('This setting only available for owner!', True)
+            return
         await query.answer("Reset Done!", show_alert=True)
         value = ""
         if data[2] in default_values:
@@ -1370,6 +1379,9 @@ async def edit_bot_settings(client, query):
             await DbManger().update_config({data[2]: value})
     elif data[1] == "editvar":
         handler_dict[message.chat.id] = False
+        if data[2] in restricted_vars and query.from_user.id != config_dict['OWNER_ID']:
+            await query.answer('This setting only available for owner!', True)
+            return
         await query.answer()
         edit_mode = len(data) == 4
         await update_buttons(message, data[2], data[1], edit_mode)
@@ -1379,6 +1391,9 @@ async def edit_bot_settings(client, query):
         rfunc = partial(update_buttons, message, data[2], data[1], edit_mode)
         await event_handler(client, query, pfunc, rfunc)
     elif data[1] == "showvar":
+        if data[2] in restricted_vars and query.from_user.id != config_dict['OWNER_ID']:
+            await query.answer('This setting only available for owner!', True)
+            return
         value = config_dict[data[2]]
         if len(str(value)) > 200:
             await query.answer()
