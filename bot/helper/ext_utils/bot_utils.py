@@ -622,13 +622,13 @@ async def compare_versions(v1, v2):
 async def get_stats(event, key="home"):
     user_id = event.from_user.id
     btns = ButtonMaker()
-    btns.ibutton("Back", f"wzmlx {user_id} stats home")
+    btns.ibutton("Back", f"bot1 {user_id} stats home")
     if key == "home":
         btns = ButtonMaker()
-        btns.ibutton("Bot Stats", f"wzmlx {user_id} stats stbot")
-        btns.ibutton("OS Stats", f"wzmlx {user_id} stats stsys")
-        btns.ibutton("Repo Stats", f"wzmlx {user_id} stats strepo")
-        btns.ibutton("Bot Limits", f"wzmlx {user_id} stats botlimits")
+        btns.ibutton("Bot Stats", f"bot1 {user_id} stats stbot")
+        btns.ibutton("OS Stats", f"bot1 {user_id} stats stsys")
+        btns.ibutton("Repo Stats", f"bot1 {user_id} stats strepo")
+        btns.ibutton("Bot Limits", f"bot1 {user_id} stats botlimits")
         msg = "⌬ <b><i>Bot & OS Statistics!</i></b>"
     elif key == "stbot":
         total, used, free, disk = disk_usage("/")
@@ -746,7 +746,7 @@ async def get_stats(event, key="home"):
             UT=("∞" if (val := config_dict["USER_MAX_TASKS"]) == "" else val),
             BT=("∞" if (val := config_dict["BOT_MAX_TASKS"]) == "" else val),
         )
-    btns.ibutton("Close", f"wzmlx {user_id} close")
+    btns.ibutton("Close", f"bot1 {user_id} close")
     return msg, btns.build_menu(2)
 
 

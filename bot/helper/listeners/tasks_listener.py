@@ -650,7 +650,7 @@ class MirrorLeechListener:
                     message += BotTheme("L_LL_MSG")
                     message += BotTheme("L_BOT_MSG")
                     buttons.ibutton(
-                        BotTheme("CHECK_PM"), f"wzmlx {user_id} botpm", "header"
+                        BotTheme("CHECK_PM"), f"bot1 {user_id} botpm", "header"
                     )
                 if config_dict["SAFE_MODE"] and self.isSuperGroup:
                     await sendMessage(
@@ -840,7 +840,7 @@ class MirrorLeechListener:
                         if config_dict["SAVE_MSG"]:
                             s_btn.ibutton(BotTheme("SAVE_MSG"), "save", "footer")
                         s_btn.ibutton(
-                            BotTheme("CHECK_PM"), f"wzmlx {user_id} botpm", "header"
+                            BotTheme("CHECK_PM"), f"bot1 {user_id} botpm", "header"
                         )
                         await sendMessage(
                             self.message,

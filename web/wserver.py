@@ -838,8 +838,8 @@ def homepage():
         <h1>SEARCH-X</h1>
     </div>
     <div class="content">
-        <img src="https://graph.org/file/639fe4239b78e5862b302.jpg" class="image">
-        <a href="https://telegram.me/WZML_X" style="text-decoration: none;">
+        <img src="https://files.catbox.moe/qha794.jpg" class="image">
+        <a href="https://telegram.me/HONEYSUPPORT" style="text-decoration: none;">
             <button class="button">Join Updates Channel Now</button>
         </a>
     </div>

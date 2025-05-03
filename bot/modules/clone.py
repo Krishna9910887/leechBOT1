@@ -278,7 +278,7 @@ async def gdcloneNode(message, link, listen_up):
     else:
         btn = ButtonMaker()
         btn.ibutton(
-            "Click Here to Read More ..", f"wzmlx {message.from_user.id} help CLONE"
+            "Click Here to Read More ..", f"bot1 {message.from_user.id} help CLONE"
         )
         reply_message = await sendMessage(
             message, CLONE_HELP_MESSAGE[0], btn.build_menu(1)
@@ -350,7 +350,7 @@ async def clone(client, message):
     if len(link) == 0:
         btn = ButtonMaker()
         btn.ibutton(
-            "Cʟɪᴄᴋ Hᴇʀᴇ Tᴏ Rᴇᴀᴅ Mᴏʀᴇ ...", f"wzmlx {message.from_user.id} help CLONE"
+            "Cʟɪᴄᴋ Hᴇʀᴇ Tᴏ Rᴇᴀᴅ Mᴏʀᴇ ...", f"bot1 {message.from_user.id} help CLONE"
         )
         await sendMessage(message, CLONE_HELP_MESSAGE[0], btn.build_menu(1))
         await delete_links(message)

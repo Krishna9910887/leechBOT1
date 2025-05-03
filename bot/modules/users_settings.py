@@ -98,7 +98,7 @@ desp_dict = {
         'Send YT-DLP Options. Timeout: 60 sec\nFormat: key:value|key:value|key:value.\nExample: format:bv*+mergeall[vcodec=none]|nocheckcertificate:True\nCheck all yt-dlp api options from this <a href="https://github.com/yt-dlp/yt-dlp/blob/master/yt_dlp/YoutubeDL.py#L184">FILE</a> to convert cli arguments to api options.',
     ],
     "usess": [
-        f'User Session is Telegram Session used to Download Private Contents from Private Channels with no compromise in Privacy, Build with Encryption.\n{"<b>Warning:</b> This Bot is not secured. We recommend asking the group owner to set the Upstream repo to the Official repo. If it is not the official repo, then SEARCH-X is not responsible for any issues that may occur in your account." if config_dict["UPSTREAM_REPO"] != "https://github.com/weebzone/SEARCH-X" else "Bot is Secure. You can use the session securely."}',
+        f'User Session is Telegram Session used to Download Private Contents from Private Channels with no compromise in Privacy, Build with Encryption.\n{"<b>Warning:</b> This Bot is not secured. We recommend asking the group owner to set the Upstream repo to the Official repo. If it is not the official repo, then SEARCH-X is not responsible for any issues that may occur in your account." if config_dict["UPSTREAM_REPO"] != "https://github.COM/Ishatgrepo/BOT1" else "Bot is Secure. You can use the session securely."}',
         "Send your Session String.\n<b>Timeout:</b> 60 sec",
     ],
     "split_size": [
@@ -898,7 +898,7 @@ async def edit_user_settings(client, query):
         handler_dict[user_id] = False
         await query.answer()
         buttons = ButtonMaker()
-        buttons.ibutton("Cʟᴏsᴇ", f"wzmlx {user_id} close")
+        buttons.ibutton("Cʟᴏsᴇ", f"bot1 {user_id} close")
         await sendMessage(message, from_user.mention, buttons.build_menu(1), thumb_path)
         await update_user_settings(query, "thumb", "leech")
     elif data[2] == "show_tds":

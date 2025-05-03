@@ -100,7 +100,7 @@ async def start(client, message):
     buttons.ubutton(BotTheme("ST_BN1_NAME"), BotTheme("ST_BN1_URL"))
     buttons.ubutton(BotTheme("ST_BN2_NAME"), BotTheme("ST_BN2_URL"))
     reply_markup = buttons.build_menu(2)
-    if len(message.command) > 1 and message.command[1] == "wzmlx":
+    if len(message.command) > 1 and message.command[1] == "bot1":
         await deleteMessage(message)
     elif len(message.command) > 1 and config_dict["TOKEN_TIMEOUT"]:
         userid = message.from_user.id
@@ -197,9 +197,9 @@ async def ping(_, message):
 async def log(_, message):
     buttons = ButtonMaker()
     buttons.ibutton(
-        BotTheme("LOG_DISPLAY_BT"), f"wzmlx {message.from_user.id} logdisplay"
+        BotTheme("LOG_DISPLAY_BT"), f"bot1 {message.from_user.id} logdisplay"
     )
-    buttons.ibutton(BotTheme("WEB_PASTE_BT"), f"wzmlx {message.from_user.id} webpaste")
+    buttons.ibutton(BotTheme("WEB_PASTE_BT"), f"bot1 {message.from_user.id} webpaste")
     await sendFile(message, "log.txt", buttons=buttons.build_menu(1))
 
 
@@ -242,11 +242,11 @@ async def search_images():
 async def bot_help(client, message):
     buttons = ButtonMaker()
     user_id = message.from_user.id
-    buttons.ibutton(BotTheme("BASIC_BT"), f"wzmlx {user_id} guide basic")
-    buttons.ibutton(BotTheme("USER_BT"), f"wzmlx {user_id} guide users")
-    buttons.ibutton(BotTheme("MICS_BT"), f"wzmlx {user_id} guide miscs")
-    buttons.ibutton(BotTheme("O_S_BT"), f"wzmlx {user_id} guide admin")
-    buttons.ibutton(BotTheme("CLOSE_BT"), f"wzmlx {user_id} close")
+    buttons.ibutton(BotTheme("BASIC_BT"), f"bot1 {user_id} guide basic")
+    buttons.ibutton(BotTheme("USER_BT"), f"bot1 {user_id} guide users")
+    buttons.ibutton(BotTheme("MICS_BT"), f"bot1 {user_id} guide miscs")
+    buttons.ibutton(BotTheme("O_S_BT"), f"bot1 {user_id} guide admin")
+    buttons.ibutton(BotTheme("CLOSE_BT"), f"bot1 {user_id} close")
     await sendMessage(message, BotTheme("HELP_HEADER"), buttons.build_menu(2))
 
 

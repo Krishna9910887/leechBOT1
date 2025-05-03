@@ -101,7 +101,7 @@ if len(DATABASE_URL) == 0:
 
 if DATABASE_URL:
     conn = MongoClient(DATABASE_URL)
-    db = conn.wzmlx
+    db = conn.bot1
     current_config = dict(dotenv_values("config.env"))
     old_config = db.settings.deployConfig.find_one({"_id": bot_id})
     if old_config is None:
@@ -557,7 +557,7 @@ if len(TITLE_NAME) == 0:
 
 COVER_IMAGE = environ.get("COVER_IMAGE", "")
 if len(COVER_IMAGE) == 0:
-    COVER_IMAGE = "https://graph.org/file/60f9f8bcb97d27f76f5c0.jpg"
+    COVER_IMAGE = "https://files.catbox.moe/qha794.jpg"
 
 GD_INFO = environ.get("GD_INFO", "")
 if len(GD_INFO) == 0:
