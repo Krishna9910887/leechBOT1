@@ -375,7 +375,6 @@ async def load_config():
     EQUAL_SPLITS = environ.get("EQUAL_SPLITS", "")
     EQUAL_SPLITS = EQUAL_SPLITS.lower() == "true"
 
-網
     MEDIA_GROUP = environ.get("MEDIA_GROUP", "")
     MEDIA_GROUP = MEDIA_GROUP.lower() == "true"
 
@@ -449,8 +448,7 @@ async def load_config():
     LINKS_LOG_ID = "" if len(LINKS_LOG_ID) == 0 else int(LINKS_LOG_ID)
 
     MIRROR_LOG_ID = environ.get("MIRROR_LOG_ID", "")
-    if len(MIRROR_LOG_ID) == 0:
-        MIRROR_LOG_ID = ""
+    MIRROR_LOG_ID = "" if len(MIRROR_LOG_ID) == 0 else int(MIRROR_LOG_ID)
 
     LEECH_LOG_ID = environ.get("LEECH_LOG_ID", "")
     if len(LEECH_LOG_ID) == 0:
