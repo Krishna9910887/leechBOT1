@@ -407,6 +407,7 @@ help_string = [
 
 <b>Extras:</b>
 ┠ /{BotCommands.AddImageCommand} [url/photo]: Add Images in Bot
+┠ /{BotCommands.PurgeCommand}: Purge the message (Owner).
 ┖ /{BotCommands.ImagesCommand}: Generate grid of Stored Images.""",
     f"""⌬ <b><i>Miscellaneous Commands!</i></b>
 

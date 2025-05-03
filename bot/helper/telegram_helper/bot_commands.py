@@ -82,7 +82,7 @@ class _BotCommands:
         self.AddImageCommand = f"addimg{CMD_SUFFIX}"
         self.ImagesCommand = f"images{CMD_SUFFIX}"
         self.IMDBCommand = f"imdb{CMD_SUFFIX}"
-        self.PurgeCommand = [f"purge{CMD_SUFFIX}", f"clear{CMD_SUFFIX}"]
+        self.PurgeCommand = f"purg{CMD_SUFFIX}"
         self.AniListCommand = f"anime{CMD_SUFFIX}"
         self.AnimeHelpCommand = f"animehelp{CMD_SUFFIX}"
         self.MediaInfoCommand = [f"mediainfo{CMD_SUFFIX}", f"mi{CMD_SUFFIX}"]
